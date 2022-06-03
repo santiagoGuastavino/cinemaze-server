@@ -1,0 +1,136 @@
+.wrapper, .nav {
+  height: 56px;
+}
+
+.wrapper {
+  position: sticky;
+  width: 100vw;
+  top: 0;
+  display: block;
+  background-color: var(--white);
+  box-shadow: var(--box-shadow);
+}
+
+.nav {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  padding: 0 var(--side-double-spacing);
+}
+
+.nav ul {
+  width: 100%;
+  display: flex;
+  list-style: none;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 3px;
+}
+
+.iconBox, .logoBox, .inputBox {
+  width: 33%;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.iconBox li {
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+  margin-left: var(--side-spacing);
+  color: var(--white);
+  background-color: var(--jobint);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.iconBox li svg {
+  width: 20px;
+  height: 20px;
+  margin-top: -2.5px;
+}
+
+.logoBox li {
+  width: 122px;
+  background-color: var(--jobint);
+  border-radius: var(--border-radius);
+  padding: 0 var(--side-spacing);
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.inputBox li {
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 992px) {
+
+}
+
+@media (min-width: 1200px) {
+  .wrapper, .nav {
+    height: 72px;
+  }
+
+  .nav {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+  .nav ul {
+    justify-content: flex-end;
+  }
+
+  .logoBox {
+    order: -1;
+    margin-right: auto;
+  }
+
+  .logoBox li {
+    margin: 0;
+  }
+
+  .iconBox, .inputBox {
+    width: fit-content;
+  }
+
+  .iconBox {
+    order: 2;
+    margin-left: var(--side-double-spacing);
+  }
+
+  .iconBox li, .inputBox li {
+    margin: 0;
+    margin-left: auto;
+    text-align: right;
+  }
+
+  .iconBox li {
+    width: 44px;
+    height: 44px;
+  }
+
+  .iconBox li svg {
+    width: 32px;
+    height: 32px;
+    margin-top: -5px;
+  }
+
+  .inputBox li {
+    width: 100%;
+  }
+}
