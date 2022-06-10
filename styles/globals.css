@@ -1,7 +1,6 @@
 html,
 body {
   font-family: var(--base-font);
-  font-weight: 600;
   position: relative;
 }
 
@@ -17,57 +16,52 @@ a {
 }
 
 :root {
-  --jobint: #019df4;
-  --black: #000000;
-  --white: #ffffff;
-  --grey: #edf1f7;
+  --black: #000;
+  --white: #fff;
+  --surface-1: #f5f5f5;
+  --surface-2: #edf1f7;
   --dark-grey: #2b2b3f;
-  --main-blue: #0a26ee;
-  --secondary-blue: #3149f1;
-  --main-magenta: #e90066;
-  --main-cyan: #00dcd4;
-  --side-spacing: 12px;
-  --side-half-spacing: 6px;
-  --side-double-spacing: 24px;
-  --font-header: 24px;
+  --primary: #019df4;
+  --blue-primary: #0a26ee;
+  --blue-secondary: #3149f1;
+  --magenta-primary: #e90066;
+  --cyan-primary: #00dcd4;
+  --side-spacing: 6px;
+  --side-spacing-x2: 12px;
+  --side-spacing-x4: 24px;
   --font-small: 14px;
   --font-medium: 16px;
   --font-big: 18px;
+  --font-header: 24px;
   --font-black: rgba(0, 0, 24, 0.84);
-  --border-radius: 8px;
+  --border-r: 8px;
   --box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 8px;
   --base-font: 'Hind Vadodara', sans-serif;
-  --background-surface: rgb(237, 241, 247);
 }
 
+/* scrollbar styles */
 ::-webkit-scrollbar, ::-webkit-scrollbar-thumb {
   width: 6px;
   height: 6px;
   border-radius: 6px;
 }
-
 ::-webkit-scrollbar-button {
   display: none;
 }
-
 ::-webkit-scrollbar-thumb {
   box-shadow: 0px 0px 0px 10px inset;
 }
-
 ::-webkit-scrollbar-thumb {
   color: rgba(0, 0, 0, 0.3);
 }
-
 ::-webkit-scrollbar, ::-webkit-scrollbar-thumb {
   width: 6px;
   height: 6px;
   border-radius: 6px;
 }
-
 ::-webkit-scrollbar-track, ::-webkit-scrollbar-track-piece {
   width: 6px;
 }
-
 ::-webkit-scrollbar-track, ::-webkit-scrollbar-track-piece {
   width: 6px;
 }

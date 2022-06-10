@@ -15,70 +15,80 @@
   display: flex;
   flex-flow: row wrap;
   align-items: center;
-  padding: 0 var(--side-double-spacing);
+  padding: 0 var(--side-spacing-x4);
 }
 
-.nav ul {
-  width: 100%;
-  display: flex;
-  list-style: none;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: center;
-  margin-right: 3px;
-}
-
-.iconBox, .logoBox, .inputBox {
+.nav div {
   width: 33%;
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
 }
 
-.iconBox li {
-  width: 24px;
-  height: 24px;
-  border-radius: 100%;
-  margin-left: var(--side-spacing);
-  color: var(--white);
-  background-color: var(--jobint);
+.barBox {
+  color: var(--primary);
+}
+
+.logoBox {
   display: flex;
-  flex-flow: row wrap;
   justify-content: center;
-  align-items: center;
 }
 
-.iconBox li svg {
-  width: 20px;
-  height: 20px;
-  margin-top: -2.5px;
+.logoBox img {
+  max-width: 122px;
+  width: 100%;
+  height: auto;
+  display: block;
+  background-color: #cecece;
 }
 
-.logoBox li {
-  width: 122px;
-  background-color: var(--jobint);
-  border-radius: var(--border-radius);
-  padding: 0 var(--side-spacing);
+.inputBox {
+  height: 48px;
   display: flex;
-  flex-flow: row wrap;
+  justify-content: flex-end;
   align-items: center;
-  margin: 0 auto;
+  position: relative;
 }
 
-.inputBox li {
-  margin-left: auto;
+.inputBox svg {
+  position: absolute;
+  font-size: 24px;
+  color: var(--blue-secondary);
+  top: 12px;
+  left: 12px;
+}
+
+.inputBox p {
+  width: 100%;
+  border-radius: var(--border-r);
+  height: 38px;
+  box-shadow: var(--box-shadow);
+  position: relative;
+  text-align: right;
+}
+
+.inputBox p input {
+  width: 70%;
+  height: 38px;
+  font-size: var(--font-medium);
+  font-family: var(--base-font);
+  outline: none;
+  border: none;
 }
 
 @media (min-width: 576px) {
-
+  .inputBox p input {
+    width: 80%;
+  }
 }
 
 @media (min-width: 768px) {
-
+  .inputBox p input {
+    width: 85%;
+  }
 }
 
 @media (min-width: 992px) {
-
+  .inputBox p input {
+    width: 88%;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -91,46 +101,30 @@
     margin: 0 auto;
   }
 
-  .nav ul {
-    justify-content: flex-end;
+  .nav div {
+    width: 50%;
+  }
+
+  .barBox {
+    display: none;
   }
 
   .logoBox {
-    order: -1;
-    margin-right: auto;
+    justify-content: flex-start;
+  }
+  
+  .inputBox svg {
+    top: 13px;
+    left: unset;
+    right: 325px;
   }
 
-  .logoBox li {
-    margin: 0;
+  .inputBox p {
+    height: 48px;
+    max-width: 360px;
   }
 
-  .iconBox, .inputBox {
-    width: fit-content;
-  }
-
-  .iconBox {
-    order: 2;
-    margin-left: var(--side-double-spacing);
-  }
-
-  .iconBox li, .inputBox li {
-    margin: 0;
-    margin-left: auto;
-    text-align: right;
-  }
-
-  .iconBox li {
-    width: 44px;
-    height: 44px;
-  }
-
-  .iconBox li svg {
-    width: 32px;
-    height: 32px;
-    margin-top: -5px;
-  }
-
-  .inputBox li {
-    width: 100%;
+  .inputBox p input {
+    height: 48px;
   }
 }

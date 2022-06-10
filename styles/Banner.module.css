@@ -1,6 +1,6 @@
 .wrapper {
   height: 70px;
-  background-color: var(--background-surface);
+  background-color: var(--surface-2);
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -14,7 +14,7 @@
   margin: 0 auto;
   max-width: 1088px;
   box-shadow: var(--box-shadow);
-  border-radius: 8px;
+  border-radius: var(--border-r);
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
@@ -23,7 +23,9 @@
 
 .div p {
   font-size: var(--font-medium);
-  color: var(--main-blue);
+  color: var(--blue-secondary);
+  cursor: pointer;
+  font-weight: 600;
 }
 
 @media (min-width: 576px) {
