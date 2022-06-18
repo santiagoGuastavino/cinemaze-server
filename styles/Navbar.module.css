@@ -36,59 +36,18 @@
   width: 100%;
   height: auto;
   display: block;
-  background-color: #cecece;
-}
-
-.inputBox {
-  height: 48px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  position: relative;
-}
-
-.inputBox svg {
-  position: absolute;
-  font-size: 24px;
-  color: var(--blue-secondary);
-  top: 12px;
-  left: 12px;
-}
-
-.inputBox p {
-  width: 100%;
-  border-radius: var(--border-r);
-  height: 38px;
-  box-shadow: var(--box-shadow);
-  position: relative;
-  text-align: right;
-}
-
-.inputBox p input {
-  width: 70%;
-  height: 38px;
-  font-size: var(--font-medium);
-  font-family: var(--base-font);
-  outline: none;
-  border: none;
 }
 
 @media (min-width: 576px) {
-  .inputBox p input {
-    width: 80%;
-  }
+
 }
 
 @media (min-width: 768px) {
-  .inputBox p input {
-    width: 85%;
-  }
+
 }
 
 @media (min-width: 992px) {
-  .inputBox p input {
-    width: 88%;
-  }
+
 }
 
 @media (min-width: 1200px) {
@@ -111,20 +70,5 @@
 
   .logoBox {
     justify-content: flex-start;
-  }
-  
-  .inputBox svg {
-    top: 13px;
-    left: unset;
-    right: 325px;
-  }
-
-  .inputBox p {
-    height: 48px;
-    max-width: 360px;
-  }
-
-  .inputBox p input {
-    height: 48px;
   }
 }

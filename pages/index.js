@@ -1,9 +1,13 @@
-// import styles from '../styles/Home.module.css'
+import { useState } from 'react'
 import Head from 'next/head'
 import Navbar from '../components/Navbar'
 import Banner from '../components/Banner'
+import SearchBar from '../components/SearchBar'
+// import Document from '../components/Document'
 
 export default function Home () {
+  const [data, setData] = useState(null)
+
   return (
     <>
       <Head>
@@ -13,7 +17,18 @@ export default function Home () {
 
       <Navbar />
       <Banner />
-      <div style={{ height: '3000px' }}></div>
+
+      <SearchBar
+        data={data}
+        setData={setData}
+      />
+
+      <section>
+        {/*  */}
+      </section>
+      {/* {data && data.map((document, i) => (
+        <Document key={i} document={document} />
+      ))} */}
     </>
   )
 }
