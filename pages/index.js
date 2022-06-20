@@ -1,5 +1,5 @@
 import styles from '../styles/Home.module.css'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import Head from 'next/head'
 import Navbar from '../components/Navbar'
 import Banner from '../components/Banner'
@@ -18,10 +18,6 @@ const rows = [
 
 export default function Home () {
   const [data, setData] = useState(null)
-
-  useEffect(() => {
-    console.log(data)
-  }, [data])
 
   return (
     <>
