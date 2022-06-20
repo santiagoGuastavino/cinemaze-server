@@ -66,7 +66,6 @@ export default function SearchBar ({ data, setData }) {
 
   // this waits for data to be set and restores the input
   useEffect(() => {
-    console.log(data)
     data && setInputValue(INPUT_INITIAL)
   }, [data])
 

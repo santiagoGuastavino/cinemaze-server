@@ -1,11 +1,16 @@
 .form {
   width: 100vw;
-  height: 10vh;
+  height: 56px;
   background-color: var(--surface-1);
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
+  margin-bottom: 1px;
+}
+
+.form * {
+  z-index: 0;
 }
 
 .div {
@@ -116,5 +121,7 @@
 }
 
 @media (min-width: 1200px) { 
-
+  .form {
+    height: 72px;
+  }
 }

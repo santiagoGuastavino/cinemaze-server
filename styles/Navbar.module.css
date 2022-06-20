@@ -1,5 +1,6 @@
 .wrapper, .nav {
   height: 56px;
+  z-index: 2;
 }
 
 .wrapper {
