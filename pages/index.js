@@ -17,7 +17,7 @@ const rows = [
 ]
 
 export default function Home () {
-  const [data, setData] = useState(null)
+  const [data, setData] = useState({})
 
   useEffect(() => {
     getRequest('/api/data', setData)
@@ -33,26 +33,28 @@ export default function Home () {
       <Navbar />
       <Banner />
 
-      {!data &&
+      {!data.normalizedData &&
         <div className={styles.spinnerBox}>
           <img src={'/spinner.gif'} />
         </div>
       }
-      {data &&
+      {data.normalizedData &&
         <section className={styles.section}>
-        <h2 className={styles.title}>{data[0].NOMBRE}</h2>
-        <header className={styles.header}>
-          {rows.map((row, i) => (
-            <input disabled key={i} value={row} />
-          ))}
-        </header>
-          {data.map((document, i) => (
+          <h2 className={styles.title}>
+            {data.title}
+          </h2>
+          <header className={styles.header}>
+            {rows.map((row, i) => (
+              <input disabled key={i} value={row} />
+            ))}
+          </header>
+          {data.normalizedData.map((document, i) => (
             <div key={i} className={styles.div}>
               <input disabled value={document.CLASE_DOC_TEXTO} />
               <input disabled value={document.REFERENCIA} />
               <input disabled value={document.NRO_ACTIVACION} />
-              <input disabled value={document.FECHA_DOC} />
-              <input disabled value={document.VENC_NETO} />
+              <input disabled value={document.FECHA} />
+              <input disabled value={document.FECHA_VENCIMIENTO} />
               <input disabled value={document.MONTO} />
               <input disabled value={document.VIA_PAGO_TEXTO} />
               <a
@@ -65,7 +67,7 @@ export default function Home () {
               </a>
             </div>
           ))}
-      </section>
+        </section>
       }
     </>
   )
