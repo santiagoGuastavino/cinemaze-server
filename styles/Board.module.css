@@ -4,26 +4,17 @@
   padding: 0 5px;
 }
 
-.title {
-  max-width: 1440px;
-  margin: 0 auto 10px;
-  padding: 10px 0;
-  font-size: 16px;
-  color: var(--primary);
-  text-indent: var(--side-spacing);
-}
-
 .header {
   background-color: #f2f2f2;
   position: relative;
 }
 
-.header div {
+.headerRows {
   font-weight: 600;
   background-color: inherit;
 }
 
-.header div p {
+.headerTitles {
   width: fit-content;
   cursor: pointer;
 }
@@ -32,7 +23,7 @@
   background-color: var(--white);
 }
 
-.div input, .div a {
+.dataInput, .smallLink {
   background-color: inherit;
 }
 
@@ -44,22 +35,28 @@
   align-items: center;
 }
 
-.header div, .div input {
-  width: 13.57%;
+.headerRows, .dataInput, .link {
+  width: 14.16%;
 }
 
-.header div:nth-child(8), .link {
+.headerRows:nth-child(7), .smallLink {
   width: 5%;
   text-align: center;
 }
 
-.header div:nth-child(8) p {
+.headerRows:nth-child(8), .link {
+  width: 10%;
+  font-size: 5px;
+  line-height: 16px;
+}
+
+.headerRows:nth-child(7) p, .headerRows:nth-child(8) p {
   width: 100%;
   text-align: center;
   pointer-events: none;
 }
 
-.header div, .div input, .div a {
+.headerRows, .dataInput, .smallLink, .link {
   font-size: 10px;  
   padding: 1px 1px;
   padding-right: 0;
@@ -72,11 +69,11 @@
   height: 18px;
 }
 
-.header div:first-child, .div input:first-child {
+.headerRows:first-child, .dataInput:first-child {
   border-left: none;
 }
 
-.link {
+.smallLink, .link {
   padding: 0;
   margin: 0;
   display: flex;
@@ -85,13 +82,13 @@
   align-items: center;
 }
 
-.link img {
+.smallLink img, .link img {
   display: block;
   width: 15px;
   height: 15px;
 }
 
-/* .header div::after {
+/* .headerRows::after {
   content: '';
   display: block;
   z-index: 10;
@@ -104,43 +101,46 @@
 } */
 
 @media (min-width: 576px) {
-  .title {
-    font-size: 20px;
-  }
-
-  .header div, .div input, .div a {
+  .headerRows, .dataInput, .smallLink, .link {
     font-size: 12px;
     padding: var(--side-spacing) var(--side-spacing);
     border: none;
     border-bottom: solid 1px var(--border-c);
     height: 31px;
   }
+
+  .headerRows:nth-child(8), .link {
+    font-size: 8px;
+    line-height: 20px;
+  }
 }
 
 @media (min-width: 768px) {
-  .title {
-    padding: 20px 0;
-  }
-
-  .header div, .div input, .div a {
+  .headerRows, .dataInput, .smallLink, .link {
     font-size: 14px;
     height: 34px;
   }
 
-  .link img {
+  .smallLink img, .link img {
     width: 20px;
     height: 20px;
+  }
+
+  .headerRows:nth-child(8), .link {
+    font-size: 11px;
+    line-height: 23px;
   }
 }
 
 @media (min-width: 992px) {
-  .title {
-    font-size: 24px;
-  }
-
-  .header div, .div input, .div a {
+  .headerRows, .dataInput, .smallLink, .link {
     font-size: 16px;
     height: 37px;
+  }
+
+  .headerRows:nth-child(8), .link {
+    font-size: 15px;
+    line-height: 24px;
   }
 }
 
@@ -154,9 +154,13 @@
     margin: 0 auto;
   }
 
-  .header div, .div input, .div a {
+  .headerRows, .dataInput, .smallLink, .link {
     padding: var(--side-spacing) var(--side-spacing-x2);
     padding-right: 0;
+    font-size: 16px;
+  }
+
+  .headerRows:nth-child(8), .link {
     font-size: 16px;
   }
 }

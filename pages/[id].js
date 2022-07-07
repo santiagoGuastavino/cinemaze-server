@@ -1,3 +1,4 @@
+import styles from '../styles/Home.module.css'
 import Head from 'next/head'
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
@@ -26,6 +27,11 @@ export default function Home ({ data }) {
 
   const [entryType, setEntryType] = useState(ENTRY_TYPES.open)
   const [currentData, setCurrentData] = useState([])
+  const [title, setTitle] = useState('')
+
+  useEffect(() => {
+    data && setTitle(data.title)
+  }, [data])
 
   useEffect(() => {
     entryType === ENTRY_TYPES.open &&
@@ -46,6 +52,9 @@ export default function Home ({ data }) {
         entryType={entryType}
         setEntryType={setEntryType}
       />
+      <h2 className={styles.title}>
+        {title}
+      </h2>
         {!data &&
           <Spinner />
         }
