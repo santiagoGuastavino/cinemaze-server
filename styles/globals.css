@@ -3,6 +3,7 @@ body {
   font-family: var(--base-font);
   position: relative;
   background-color: var(--surface-2);
+  overflow-x: hidden;
 }
 
 * {
@@ -40,6 +41,7 @@ a {
   --font-black: rgba(0, 0, 24, 0.84);
   --border-c: #d9d9d9;
   --border-r: 8px;
+  --inner-padding: 6px;
   --box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 8px;
   --base-font: 'Hind Vadodara', sans-serif;
   --transition: all 0.2s ease-in-out;

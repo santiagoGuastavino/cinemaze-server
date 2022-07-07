@@ -21,11 +21,34 @@
   align-items: center;
 }
 
-.div p {
+.div button {
   font-size: var(--font-medium);
-  color: var(--blue-secondary);
-  cursor: pointer;
   font-weight: 600;
+  transition: var(--transition);
+  padding: var(--inner-padding);
+  border-radius: var(--border-r);
+}
+
+.inactiveButton {
+  cursor: pointer;
+  color: var(--blue-secondary);
+  border: 1px solid var(--white);
+  background-color: inherit;
+}
+
+.inactiveButton:hover {
+  border: 1px solid var(--primary);
+}
+
+.inactiveButton:active {
+ border: 1px solid var(--primary-light);
+}
+
+.activeButton {
+  pointer-events: none;
+  background-color: var(--primary);
+  color: var(--white);
+  border: 1px solid var(--primary);
 }
 
 @media (min-width: 576px) {
@@ -57,7 +80,6 @@
 
   .div {
     height: 48px;
-
   }
 }
 
