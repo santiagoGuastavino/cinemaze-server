@@ -73,7 +73,7 @@ export default function Home ({ data }) {
 
 const ids = [
   'KmeNH1iRWiB7m3Wu',
-  'p3iU3MDq4oWNbc94',
+  // 'p3iU3MDq4oWNbc94',
   'f7sHyEXz5MVvXgkL'
 ]
 
