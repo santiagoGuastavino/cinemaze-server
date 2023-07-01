@@ -1,0 +1,5 @@
+{
+  "ALREADY_EXISTS": "The provided {property} is already in use.",
+  "NOT_FOUND": "The provided {entity} was not found.",
+  "ALREADY_INITIALIZED": "The genre entity and values have already been initialized. Genres can not be created again."
+}
